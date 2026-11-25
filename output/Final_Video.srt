@@ -1,0 +1,71 @@
+1
+00:00:05,000 --> 00:00:25,700
+Imagine standing on the side of a smooth hill. In single-variable calculus, a curve has only one slope at each point. On a two-variable surface, however, your steepness depends entirely on the direction you choose to walk.
+
+2
+00:00:26,700 --> 00:00:46,400
+Step one way and you climb rapidly; step along a contour and your height barely changes. How do we measure the rate of change in any direction, and find the single direction of steepest ascent?
+
+3
+00:00:48,900 --> 00:01:10,100
+We begin with partial derivatives. Holding y fixed, the partial derivative with respect to x measures the slope purely in the x-direction. Holding x fixed, the partial derivative with respect to y measures the slope in the y-direction.
+
+4
+00:01:11,100 --> 00:01:23,800
+Packing these two coordinate slopes together into a vector gives the gradient of f, written as del f of x, y.
+
+5
+00:01:24,800 --> 00:01:46,000
+To measure slope in any arbitrary direction u, we require u to be a unit vector of length one, so we measure change per unit step. The directional derivative is then the dot product: del f dot u.
+
+6
+00:01:48,500 --> 00:02:05,700
+Why does the gradient always point in the direction of steepest increase? Rewrite the dot product using theta, the angle between the gradient vector and our unit direction vector u.
+
+7
+00:02:06,700 --> 00:02:18,400
+Because u has length one, the directional derivative simplifies to the magnitude of the gradient times cosine of theta.
+
+8
+00:02:19,400 --> 00:02:41,600
+As u rotates around the unit circle, cosine theta reaches its maximum value of one only when theta equals zero degrees—meaning u points in the exact same direction as the gradient. The maximum slope is the norm of del f.
+
+9
+00:02:42,600 --> 00:03:00,767
+When theta is ninety degrees, cosine theta is zero, so walking tangent to a level curve produces zero instantaneous height change. At one hundred eighty degrees, you descend as steeply as possible.
+
+10
+00:03:03,267 --> 00:03:19,467
+Let us work step by step through a concrete example: the paraboloid f of x, y equals x squared plus y squared, evaluated at the point one, two.
+
+11
+00:03:20,467 --> 00:03:37,667
+First, compute both partial derivatives: partial f partial x equals two x, and partial f partial y equals two y. Evaluating at one, two gives the gradient vector two, four.
+
+12
+00:03:38,667 --> 00:03:54,867
+Next, choose the direction u equals three-fifths, four-fifths. Its length is the square root of nine twenty-fifths plus sixteen twenty-fifths, which equals one—confirming u is a unit vector.
+
+13
+00:03:55,867 --> 00:04:19,067
+Taking the dot product gives two times three-fifths plus four times four-fifths, which equals six-fifths plus sixteen-fifths, or twenty-two fifths—a slope of four point four. Meanwhile, the maximum possible slope at this point is two root five, approximately four point four seven.
+
+14
+00:04:21,767 --> 00:04:32,467
+Geometrically, the level curves of x squared plus y squared are concentric circles centered at the origin.
+
+15
+00:04:33,467 --> 00:04:52,667
+At the point one, two, the gradient vector two, four points radially outward—perpendicular to the circle of radius root five. Walking tangent to the circle gives zero change, while walking radially outward climbs fastest.
+
+16
+00:04:53,667 --> 00:05:13,367
+Because our chosen direction three-fifths, four-fifths is separated from the gradient by approximately ten point three degrees, its slope of four point four captures almost all of the maximum steepness of four point four seven.
+
+17
+00:05:15,867 --> 00:05:29,567
+To recap: the gradient del f combines the partial derivatives and always points in the direction of steepest increase, perpendicular to level curves.
+
+18
+00:05:30,367 --> 00:05:45,534
+For any unit direction u, the directional derivative is del f dot u, bounded between negative and positive norm of del f. Thank you for watching.

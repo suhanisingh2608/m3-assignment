@@ -1,0 +1,40 @@
+# Secrets and local environment (NEVER commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Python & virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Manim & media caches
+media/
+.partial_movie_files/
+output/Preview_Video.mp4
+*.wav
+*.mp3
+*.flac
+*.aac
+*.m4a
+
+# LaTeX intermediate build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

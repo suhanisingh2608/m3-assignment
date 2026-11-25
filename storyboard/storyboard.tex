@@ -1,0 +1,109 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.52in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{hyperref}
+
+\definecolor{navy}{HTML}{0D1117}
+\definecolor{slate}{HTML}{1B2838}
+\definecolor{rowtint}{HTML}{F1F5F9}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.20}
+
+\begin{document}
+
+\noindent\colorbox{navy}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+\vspace{8pt}
+\hspace{8pt}{\color{white}\Large\bfseries Gradient and Directional Derivatives: Six-Scene Educational Storyboard}\\[4pt]
+\hspace{8pt}{\color[HTML]{8AEAD8}\normalsize Measuring Steepness in Any Direction \quad|\quad M3 — Linear Algebra and Calculus}\\[6pt]
+\hspace{8pt}{\color[HTML]{CBD5E1}\small \textbf{Format:} 1920$\times$1080, 30 fps, 16:9 MP4 \quad\textbullet\quad \textbf{Target Duration:} $\sim$5:53 (within 5--7 min) \quad\textbullet\quad \textbf{Example:} $f(x,y)=x^2+y^2$}
+\vspace{8pt}
+}}
+
+\vspace{8pt}
+
+\section*{\color{slate}1. Learning Objective \& Mathematical Scope}
+\textbf{Objective:} Explain partial derivatives, the gradient vector $\nabla f$, the directional derivative $D_{\mathbf{u}} f$ using a unit direction vector $\mathbf{u}$, and why $\nabla f$ points in the direction of steepest increase, demonstrated on $f(x, y) = x^2 + y^2$.
+
+\vspace{4pt}
+\noindent\colorbox{rowtint}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+\vspace{4pt}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Core Definitions:} & $\nabla f(x, y) = \left\langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right\rangle$, \quad $D_{\mathbf{u}} f = \nabla f \cdot \mathbf{u} = \|\nabla f\|\cos\theta$ \quad ($\|\mathbf{u}\| = 1$) \\[4pt]
+\textbf{Worked Example:} & $f(x, y) = x^2 + y^2$ at $P_0(1, 2)$: $\nabla f(1,2) = \langle 2, 4\rangle$, $\mathbf{u} = \langle \frac{3}{5}, \frac{4}{5}\rangle$ ($\|\mathbf{u}\|=1$), $D_{\mathbf{u}} f(1,2) = \frac{22}{5} = 4.4$. \\[4pt]
+\textbf{Steepest Ascent:} & $\|\nabla f(1,2)\| = 2\sqrt{5} \approx 4.4721$; angle between $\mathbf{u}$ and $\nabla f(1,2)$ is $\theta = \arccos(2.2/\sqrt{5}) \approx 10.3^\circ$.
+\end{tabularx}
+\vspace{4pt}
+}}
+
+\section*{\color{slate}2. Visual System \& Audio Specification}
+\begin{tabularx}{\textwidth}{@{}l X l X@{}}
+\toprule
+\textbf{Canvas} & Deep charcoal/navy (\texttt{\#0D1117}) & \textbf{Primary Highlight} & Cyan (\texttt{\#53D8FB}) \\
+\textbf{Reference Grid} & Subdued blue/grey (\texttt{\#526477}) & \textbf{Secondary Highlight} & Amber (\texttt{\#FFB84D}) \\
+\textbf{Gradient / Key Result} & Restrained bright teal (\texttt{\#55D6BE}) & \textbf{Tracked Point} & Coral (\texttt{\#FF718D}) \\
+\textbf{Narration \& Subtitles} & Offline macOS TTS (\texttt{say}) + \texttt{.srt} & \textbf{Music / Assets} & None (100\% programmatic Manim) \\
+\bottomrule
+\end{tabularx}
+
+\section*{\color{slate}3. Six-Scene Production Storyboard}
+
+\small
+\begin{tabularx}{\textwidth}{@{}p{2.2cm} p{1.3cm} X X@{}}
+\toprule
+\rowcolor{slate}
+{\color{white}\textbf{Scene}} & {\color{white}\textbf{Duration}} & {\color{white}\textbf{On-Screen Text, Formulae \& Visual Plan}} & {\color{white}\textbf{Narration Summary}} \\
+\midrule
+
+\textbf{1. Hook / Context} &
+$\sim$48\,s &
+Opening title card; 2D contour plot with $P_0$ and three radiating arrows (radial steepest, diagonal moderate, tangent flat $\Delta z = 0$). &
+Motivate why slope on a 2D surface depends on direction, posing the question of steepest ascent. \\
+\midrule
+
+\rowcolor{rowtint}
+\textbf{2. Concept Intro} &
+$\sim$60\,s &
+Coordinate plane showing $\frac{\partial f}{\partial x}$ (cyan), $\frac{\partial f}{\partial y}$ (amber), resultant $\nabla f$ (teal), and unit circle $\|\mathbf{u}\|=1$ with $D_{\mathbf{u}} f = \nabla f \cdot \mathbf{u}$. &
+Define partial derivatives, pack them into $\nabla f$, normalize direction $\mathbf{u}$, and introduce the dot product rule. \\
+\midrule
+
+\textbf{3. Visual Intuition} &
+$\sim$75\,s &
+Concentric contours with fixed $\nabla f$, rotating unit vector $\mathbf{u}$, and live $\|\nabla f\|\cos\theta$ gauge pausing at $\theta=0^\circ$, $90^\circ$, $180^\circ$. &
+Prove via $D_{\mathbf{u}} f = \|\nabla f\|\cos\theta$ why $\theta=0^\circ$ gives maximum ascent and $\theta=90^\circ$ gives zero change. \\
+\midrule
+
+\rowcolor{rowtint}
+\textbf{4. Worked Example} &
+$\sim$79\,s &
+Split view: contour $x^2+y^2=5$ through $P_0(1,2)$ with $\nabla f(1,2)=\langle 2,4\rangle$ and $\mathbf{u}=\langle\frac{3}{5},\frac{4}{5}\rangle$; step-by-step card yielding $D_{\mathbf{u}} f = \frac{22}{5}=4.4$ vs $2\sqrt{5}\approx 4.47$. &
+Walk through partials, gradient evaluation, unit-length check, dot product arithmetic, and max slope comparison. \\
+\midrule
+
+\textbf{5. Interpretation} &
+$\sim$54\,s &
+Concentric circles $x^2+y^2=c$, right-angle marker between $\nabla f(1,2)$ and tangent ($D_{\mathbf{u}_\perp}f=0$), and $\theta\approx 10.3^\circ$ alignment card ($4.4 \approx 98.4\%$ of $\|\nabla f\|$). &
+Connect algebra back to geometry: radial gradient is normal to level circles; $\mathbf{u}$ aligns within $10.3^\circ$. \\
+\midrule
+
+\rowcolor{rowtint}
+\textbf{6. Summary \& Credits} &
+$\sim$38\,s &
+Three takeaway cards ($\nabla f$, $D_{\mathbf{u}}f$, bounds $-\|\nabla f\|\le D_{\mathbf{u}}f\le\|\nabla f\|$) followed by References, Tools, and AI Disclosure card. &
+Recap the three core results clearly and close with transparent references and AI disclosure. \\
+\bottomrule
+\end{tabularx}
+
+\vspace{8pt}
+\section*{\color{slate}4. References \& AI Tools Disclosure}
+\textbf{References:} J.~Stewart, \textit{Calculus: Early Transcendentals} (Ch.~14); M3 Linear Algebra and Calculus Lecture Notes. \\
+\textbf{Toolchain:} Manim Community v0.22.1, Python 3.12.3, BasicTeX (\texttt{pdflatex}, \texttt{dvisvgm} 3.6), FFmpeg 9.1; starter structure adapted from \texttt{sohamdhande/m3-manim-animation-kit}. \\
+\textbf{AI Disclosure:} Google Antigravity assisted with project planning and Python/Manim code generation. Final mathematical review and verification by the student is pending prior to submission.
+
+\end{document}
